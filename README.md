@@ -1,4 +1,4 @@
-# vue-init
+# vue-mobile-init
 
 ## Project setup
 
@@ -30,9 +30,12 @@ yarn lint
 + src - 主代码目录
     + assets - 静态文件，会被打包转译
         + css - 存放单独css文件的目录
-            + functions.scss - 存放sccs声明的公共函数（该文件会经过webpack loader引入到每个vue的style中，使用时不需要单独引入）
-            + mixins.scss - 初始化css配置，以及通用的css class（该文件会在app.vue文件中引入，使用时直接在标签上设置class）
-            + variables.scss - 存放sccs声明公共变量（该文件会经过webpack loader引入到每个vue的style中，使用时不需要单独引入）
+            + functions.scss 
+                - 存放sccs声明的公共函数（该文件会经过webpack loader引入到每个vue的style中，使用时不需要单独引入）
+            + mixins.scss 
+                - 初始化css配置，以及通用的css class（该文件会在app.vue文件中引入，使用时直接在标签上设置class）
+            + variables.scss 
+                - 存放sccs声明公共变量（该文件会经过webpack loader引入到每个vue的style中，使用时不需要单独引入）
         + images - 存放图片资源的目录
             + 如果项目图片比较多，可在按页面结构划分子文件夹（默认使用扁平化方式存放）
     + components - 公共组件的目录
@@ -55,6 +58,8 @@ yarn lint
 + 分支管理 - TODO
 + 数据Mock - TODO
 + 提交代码会自动执行gitHooks代码检查（commit后面添加--no-verify可跳过此环节，不推荐）
++ 移动端rem适配
+    + 默认为750设计图的配置，引入了postcss-pxtrem，自动对px单位进行转换。
 
 ### Customize configuration
 

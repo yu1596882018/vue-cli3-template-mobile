@@ -1,39 +1,25 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/images/logo.png" />
-    <el-button type="primary">主要按钮</el-button>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h2 class="hello-world">hello world</h2>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-const a = 1
-console.log(a)
-
 export default {
   name: 'Home',
-  components: {
-    HelloWorld,
-  },
+  components: {},
   created() {
-    this.$services.querySystemDetails(1).then(
-      () => {
-        console.log(this)
-        console.log('request', arguments)
-      },
-      () => {
-        console.log(this)
-      },
-    )
+    /* this.$services.querySystemDetails(1).then(() => {
+      console.log('request', arguments)
+    }) */
   },
 }
 </script>
 
 <style lang="scss">
-body {
-  background: $blue;
+.hello-world {
+  font-size: 80px;
+  box-sizing: border-box;
+  display: flex;
 }
 </style>

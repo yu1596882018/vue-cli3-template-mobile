@@ -1,5 +1,5 @@
 // loading管理逻辑
-import Vue from 'vue'
+import { Toast } from 'vant'
 
 let $requestLoadingCount = 0
 
@@ -14,11 +14,10 @@ export default function (requestOptions) {
     loadingTimer = setTimeout(() => {
       showLoading = true
       $requestLoadingCount++
-      loading = Vue.prototype.$loading({
-        lock: true,
-        text: 'Loading',
-        spinner: 'el-icon-loading',
-        background: 'rgba(0, 0, 0, 0.3)',
+      loading = Toast.loading({
+        duration: 0,
+        forbidClick: true,
+        message: '加载中...',
       })
     }, 300)
   }
@@ -29,7 +28,7 @@ export default function (requestOptions) {
       if (--$requestLoadingCount <= 0) {
         setTimeout(() => {
           if ($requestLoadingCount <= 0) {
-            loading.close()
+            loading.clear()
           }
         }, 500)
       }
