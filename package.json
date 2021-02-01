@@ -82,7 +82,8 @@
       "postcss-pxtrem": {
         "viewportWidth": 750,
         "unitPrecision": 5,
-        "minPixelValue": 1
+        "minPixelValue": 1,
+        "uncoverSelectors": ["van"]
       },
       "autoprefixer": {
       },
