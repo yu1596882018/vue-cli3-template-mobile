@@ -1,4 +1,6 @@
 ;(function flexible(window, document) {
+  var maxWidth = 750 // 最大宽度
+  var minWidth = 320 // 最小宽度
   var docEl = document.documentElement
   var dpr = window.devicePixelRatio || 1
 
@@ -11,11 +13,13 @@
     }
   }
 
-  setBodyFontSize()
+  // setBodyFontSize()
 
   // set 1rem = viewWidth / 10
   function setRemUnit() {
-    var rem = docEl.clientWidth / 10
+    var clientWidth = docEl.clientWidth > maxWidth ? maxWidth : docEl.clientWidth
+    clientWidth = clientWidth < minWidth ? minWidth : clientWidth
+    var rem = clientWidth / 10
     docEl.style.fontSize = rem + 'px'
   }
 
