@@ -85,20 +85,5 @@
       "vue-cli-service lint",
       "git add"
     ]
-  },
-  "postcss": {
-    "plugins": {
-      "postcss-pxtorem": {
-        "rootValue": 100,
-        "unitPrecision": "2",
-        "propList": [
-          "*"
-        ],
-        "minPixelValue": 1,
-        "exclude": "node_modules"
-      },
-      "autoprefixer": {},
-      "postcss-preset-env": {}
-    }
   }
 }

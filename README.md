@@ -59,7 +59,7 @@ yarn lint
 + 数据Mock - TODO
 + 提交代码会自动执行gitHooks代码检查（commit后面添加--no-verify可跳过此环节，不推荐）
 + 移动端rem适配
-    + 默认为750设计图的配置，引入了postcss-pxtrem，自动对px单位进行转换。
+    + 默认为750设计图的配置，引入了postcss-pxtorem，自动对px单位进行转换。
 
 ### Customize configuration
 
