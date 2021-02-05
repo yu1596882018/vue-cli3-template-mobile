@@ -19,7 +19,7 @@
   function setRemUnit() {
     var clientWidth = docEl.clientWidth > maxWidth ? maxWidth : docEl.clientWidth
     clientWidth = clientWidth < minWidth ? minWidth : clientWidth
-    var rem = clientWidth / 10
+    var rem = clientWidth / 7.5
     docEl.style.fontSize = rem + 'px'
   }
 

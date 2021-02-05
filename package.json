@@ -31,7 +31,7 @@
     "node-sass": "^5.0.0",
     "postcss-loader": "^4.2.0",
     "postcss-preset-env": "^6.7.0",
-    "postcss-pxtrem": "3.0.3",
+    "postcss-pxtorem": "^5.1.1",
     "prettier": "^2.2.1",
     "sass-loader": "^10.1.1",
     "sass-resources-loader": "^2.1.1",
@@ -79,14 +79,16 @@
   },
   "postcss": {
     "plugins": {
-      "postcss-pxtrem": {
-        "viewportWidth": 750,
-        "unitPrecision": 5,
+      "postcss-pxtorem": {
+        "rootValue": 100,
+        "unitPrecision": "2",
+        "propList": [
+          "*"
+        ],
         "minPixelValue": 1,
-        "uncoverSelectors": ["van"]
+        "exclude": "node_modules"
       },
-      "autoprefixer": {
-      },
+      "autoprefixer": {},
       "postcss-preset-env": {}
     }
   }
