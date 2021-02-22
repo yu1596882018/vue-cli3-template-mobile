@@ -64,6 +64,7 @@ export default {
         return response
       },
       function (error) {
+        Vue.prototype.$toast.fail('网络繁忙~')
         // 对响应错误做点什么
         /* let res = error.response
       if (res && res.status !== 200 && res.status !== 401) {
