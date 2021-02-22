@@ -6,10 +6,28 @@ axios.defaults.baseURL = requestBaseUrl
 
 export default {
   install(Vue) {
-    Vue.prototype.$request = function () {
+    let loading = null
+
+    Vue.prototype.$request = function (options) {
       let _this = this
       let _arguments = arguments
-      const requestEnd = loadingManage.apply(_this, _arguments)
+
+      const requestEnd = loadingManage({
+        ...(options && typeof options === 'object' ? options : {}),
+        showLoading: () => {
+          if (!loading) {
+            loading = Vue.prototype.$toast.loading({
+              duration: 0,
+              forbidClick: true,
+              message: '加载中...',
+            })
+          }
+        },
+        hideLoading() {
+          loading.clear()
+          loading = null
+        },
+      })
 
       return new Promise(function (resolve, reject) {
         axios.apply(this, _arguments).then(

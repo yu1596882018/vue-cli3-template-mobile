@@ -1,6 +1,4 @@
 // loading管理逻辑
-import { Toast } from 'vant'
-
 let $requestLoadingCount = 0
 
 export default function (requestOptions) {
@@ -9,16 +7,12 @@ export default function (requestOptions) {
     ...(typeof requestOptions === 'object' ? requestOptions : {}),
   }
 
-  let showLoading, loading, loadingTimer
+  let showLoading, loadingTimer
   if (options.openLoadingSwitch) {
     loadingTimer = setTimeout(() => {
       showLoading = true
       $requestLoadingCount++
-      loading = Toast.loading({
-        duration: 0,
-        forbidClick: true,
-        message: '加载中...',
-      })
+      options.showLoading()
     }, 300)
   }
 
@@ -28,7 +22,7 @@ export default function (requestOptions) {
       if (--$requestLoadingCount <= 0) {
         setTimeout(() => {
           if ($requestLoadingCount <= 0) {
-            loading.clear()
+            options.hideLoading()
           }
         }, 500)
       }
