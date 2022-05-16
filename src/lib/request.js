@@ -20,6 +20,7 @@ export default {
           if (!loading) {
             loading = Vue.prototype.$toast.loading({
               duration: 0,
+              position: 'middle',
               forbidClick: true,
               message: '加载中...',
             })
@@ -66,7 +67,7 @@ export default {
         return response
       },
       function (error) {
-        Vue.prototype.$toast.fail('网络繁忙~')
+        Vue.prototype.$toast('网络繁忙~')
         // 对响应错误做点什么
         /* let res = error.response
       if (res && res.status !== 200 && res.status !== 401) {
