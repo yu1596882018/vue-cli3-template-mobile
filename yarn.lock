@@ -1543,7 +1543,7 @@
 
 "@yu1596882018/web-sdk@1.0.6":
   version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@yu1596882018/web-sdk/-/web-sdk-1.0.6.tgz#4ce49ac6711b72511ea2584acd30f60cb9c5debf"
+  resolved "https://registry.npmmirror.com/@yu1596882018/web-sdk/-/web-sdk-1.0.6.tgz#4ce49ac6711b72511ea2584acd30f60cb9c5debf"
   integrity sha512-UqV+k1YCSrcaCB8UigfR+TzOrz+bF5DvjphAMZJo2ptBPZOw7PhOrmdTEmEkvzz1sfe62A+c1FaHMq+iQbHZ1A==
 
 abbrev@1:
