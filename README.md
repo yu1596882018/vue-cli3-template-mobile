@@ -52,14 +52,33 @@ yarn lint
         + 文件模式 - 用于一个页面，只有一个vue文件
         + 文件夹模式 - 用于一个页面，有多个vue文件，且其他文件不适合放到公共组件中（文件夹下，index.vue作为页面入口）
 
-### 开发流程
+### 开发须知
 
 + 编辑器开启eslint、prettier插件 - TODO
-+ 分支管理 - TODO
-+ 数据Mock - TODO
++ 分支管理
+    + master - 生产环境
+    + st - 测试环境
+    + dev - 开发环境（开发时应使用该分支）
 + 提交代码会自动执行gitHooks代码检查（commit后面添加--no-verify可跳过此环节，不推荐）
 + 移动端rem适配
     + 默认为750设计图的配置，引入了postcss-pxtorem，自动对px单位进行转换。
++ vant 按需加载
+    + 统一在`src/lib/importVant.js`文件中引入需要的组件，方便管理。
+
+### git commit规范
+
++ Commit message格式
+    + `<type>: <subject>`注意冒号后面有空格。
+
++ `type` 用于说明 commit 的类别，只允许使用下面7个标识。
+    + feat：新功能（feature）
+    + fix：修补bug
+    + docs：文档（documentation）
+    + style： 格式（不影响代码运行的变动）
+    + refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+    + test：增加测试
+    + chore：构建过程或辅助工具的变动
+
 
 ### Customize configuration
 

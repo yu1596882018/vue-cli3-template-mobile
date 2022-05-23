@@ -1,17 +1,28 @@
 @charset "UTF-8";
-//初始化浏览器样式
-@import "~@yu1596882018/web-sdk/es/style/resetMobile";
-
 //公用样式
 @import "~@yu1596882018/web-sdk/es/style/mixins";
 
 //布局
-html, body, .h100 {
+html, body {
   height: 100%;
+}
+
+html {
+  background: #F9F9F9;
+}
+
+body {
+  min-width: 320PX;
+  max-width: 750PX;
+  margin: 0 auto;
+  background: #fff;
+  transform-style: preserve-3d;
 }
 
 #layer {
   min-height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 body .van-pull-refresh {

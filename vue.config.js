@@ -15,5 +15,12 @@ module.exports = {
 
   css: {
     sourceMap: true,
+    loaderOptions: {
+      less: {
+        modifyVars: {
+          hack: `true; @import "${path.join(__dirname, './src/assets/css/vantTheme.less')}";`,
+        },
+      },
+    },
   },
 }
